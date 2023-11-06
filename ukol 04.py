@@ -1,14 +1,16 @@
-# Nechce mi to vyhodit else, nevím proc :-(
+def over_format (prijemce):
+    if "+420" not in prijemce:
+        spravny_format = ("+420" + prijemce)
+    if len(spravny_format) == 13:
+       spravny_format
+    else:
+        print("Nespravny format cisla.")
+
+    return spravny_format
 
 prijemce = input("Zadejte cislo prijemce: ")
-
-if "+420" not in prijemce:
-    spravny_format = "+420" + prijemce
-    print(f"Cislo prijemce je {spravny_format}.")
-elif len(prijemce) == 9 or len(prijemce) == 13:
-    spravny_format = prijemce
-else:
-    print("Nespravny format cisla.")
+telefon = over_format(prijemce)
+print (f"Vaše číslo je {telefon}")
 
 def zpocitej_cenu (zprava):
     delka_zpravy = len(zprava)
