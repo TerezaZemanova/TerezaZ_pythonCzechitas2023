@@ -3,10 +3,9 @@ def over_format (prijemce):
         spravny_format = ("+420" + prijemce)
     if len(spravny_format) == 13:
        spravny_format
+       return spravny_format
     else:
         print("Nespravny format cisla.")
-
-    # return spravny_format –> ALE pak vypíše po else i "Zadejte zprávu."
 
 def zpocitej_cenu (zprava):
     delka_zpravy = len(zprava)
