@@ -6,11 +6,7 @@ def over_format (prijemce):
     else:
         print("Nespravny format cisla.")
 
-    return spravny_format
-
-prijemce = input("Zadejte cislo prijemce: ")
-telefon = over_format(prijemce)
-print (f"Vaše číslo je {telefon}")
+    # return spravny_format –> ALE pak vypíše po else i "Zadejte zprávu."
 
 def zpocitej_cenu (zprava):
     delka_zpravy = len(zprava)
@@ -22,6 +18,10 @@ def zpocitej_cenu (zprava):
 
     return celkova_cena
 
-zprava = input("Zadejte zpravu: ")
-cena = zpocitej_cenu(zprava)
-print(f"Vaše zpráva stojí {cena} Kc.")
+prijemce = input("Zadejte cislo prijemce: ")
+telefon = over_format(prijemce)
+if telefon:
+    print (f"Vaše číslo je {telefon}")
+    zprava = input("Zadejte zpravu: ")
+    cena = zpocitej_cenu(zprava)
+    print(f"Vaše zpráva stojí {cena} Kc.")

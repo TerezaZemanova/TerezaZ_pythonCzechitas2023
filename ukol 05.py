@@ -10,16 +10,16 @@ teploty = [
 prumerne_teploty = []
 ranní_teploty = []
 nocni_teploty = []
-poledni_a_nocni = []
+poledni_a_vecerni = []
 
 for den in teploty:
     denni_prumer = round(sum(den) / len(den), 2)
     prumerne_teploty.append(denni_prumer)
     ranní_teploty.append(den[0])
     nocni_teploty.append(den[3])
-    poledni_a_nocni.append(den[1:3])
+    poledni_a_vecerni.append(den[1:3])
 
 print("Průměrné teploty:", prumerne_teploty)
 print("Ranní teploty:", ranní_teploty)
 print("Noční teploty:", nocni_teploty)
-print("Polední a noční teploty:", poledni_a_nocni)
+print("Polední a večerní teploty:", poledni_a_vecerni)
